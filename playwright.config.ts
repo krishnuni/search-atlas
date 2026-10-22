@@ -6,7 +6,7 @@ export default defineConfig({
   timeout: 30000,
   use: {
     baseURL: process.env.ATLAS_TEST_URL ?? "http://127.0.0.1:5173",
-    channel: process.env.CI ? undefined : "chrome",
+    channel: "chrome",
     screenshot: "only-on-failure",
     trace: "retain-on-failure",
     ...devices["Desktop Chrome"],

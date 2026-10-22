@@ -96,7 +96,7 @@ npm run test:e2e
 npm run benchmark
 ```
 
-Browser tests expect a running local server. Locally they use installed Chrome; in CI they use Playwright Chromium. Set `ATLAS_TEST_URL` to exercise a production preview. Test browsers are installed separately with `npx playwright install chromium` when required.
+Browser tests expect a running local server and installed Google Chrome. CI uses Chrome supplied by GitHub's Ubuntu 24.04 runner image, recording its version before testing. Set `ATLAS_TEST_URL` to exercise a production preview. This avoids an extra browser download on every CI run.
 
 The unit suite includes **1,000 seeded generated grids** checked against an independent Bellman–Ford reference, plus heuristic consistency/admissibility, weighted routes, corner cases, heap invariants, deterministic mazes, round trips and replay/seek checks. Generated-case counts are separate from test-file assertion groups.
 
