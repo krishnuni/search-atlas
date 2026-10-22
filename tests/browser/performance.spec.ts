@@ -4,6 +4,10 @@ test("profiles two 128x128 histories, playback and random seek", async ({
   page,
   browser,
 }) => {
+  test.skip(
+    Boolean(process.env.CI),
+    "Hardware performance budgets are profiled on a documented reference host, not a shared CI runner.",
+  );
   test.setTimeout(90000);
   await page.goto("/");
   await page.getByRole("button", { name: "Resize", exact: true }).click();
