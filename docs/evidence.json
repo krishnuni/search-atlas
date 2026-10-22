@@ -1,5 +1,5 @@
 {
-  "recordedAt": "2026-10-22T13:08:45.293Z",
+  "recordedAt": "2026-10-22T13:37:11.443Z",
   "engine": "1.0.0",
   "description": "SHA-256 of actual source, tests, built assets and captured screenshots at release preparation.",
   "sha256": {
@@ -15,7 +15,7 @@
     "src/worker/search.worker.ts": "41a84fd89c4405ec90c2c1ff81bb4ecac80f7e90aa2a723780742c058f5e2045",
     "tests/browser/accessibility.spec.ts": "8be61d1d59c846b0943e344248f5f39a70daca38fcd5c205b419d63c62b84c76",
     "tests/browser/laboratory.spec.ts": "a06af67c72fcc6c38ac31177c2bc4e4dc5ee72cf876cae00466892b7f9e449f3",
-    "tests/browser/performance.spec.ts": "437a299670e0368ca619ff68367990b3cdc1638b3681190a728e52d85a00d635",
+    "tests/browser/performance.spec.ts": "9d3d03cbe82c95e93ee64d6b24a7e5ebbceb8a26412b0e51dc3ee3358cd3df83",
     "tests/editor.test.ts": "0abc4a5f849777c2130e6b8187e9bfb97ebb46f49bd183361c59d6faf0a9e981",
     "tests/engine.test.ts": "5c182ccd04243be23ce74acbc251cd72c89fceebcc3768a7b0594d49b8bec5fe",
     "dist/assets/browserAll-DiE2q1fl.js": "074bcfc0c3d10588937e350281b5770aff4cad592dbe1a8189e3daaa281dacf1",

@@ -2,7 +2,7 @@
 
 **An instrument for curiosity.** An original browser laboratory for constructing pathfinding problems, inspecting search decisions and comparing algorithms on the same terrain.
 
-[Open the live laboratory](https://search-atlas-lab.vaikrish8.chatgpt.site) · [Source repository](https://github.com/krishnuni/search-atlas)
+[Open on GitHub Pages](https://krishnuni.github.io/search-atlas/) · [Source repository](https://github.com/krishnuni/search-atlas)
 
 Search Atlas connects a responsive PixiJS grid to an independently tested TypeScript search engine. Search is computed in a Web Worker; playback follows an exact recorded history. Pause on a decision, inspect its scores and parents, rewind it, or compare a different algorithm without changing the problem.
 

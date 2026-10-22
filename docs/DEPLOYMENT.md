@@ -1,19 +1,21 @@
-# Deployment record
+# GitHub Pages deployment
 
-Search Atlas was deployed publicly on 22 October 2026 after local production checks passed.
+The application is hosted directly from this repository through GitHub Pages:
 
-- Live URL: https://search-atlas-lab.vaikrish8.chatgpt.site
-- GitHub source: https://github.com/krishnuni/search-atlas
-- Sites project: appgprj_6ada01d59120819193ebda6bddb59fad
-- Saved version: appgprj_6ada01d59120819193ebda6bddb59fad~appgver_0ccd1539cec48191af612436e2b4e900
-- Deployed source commit: 6832af47b2864f3032993febd113474c65a4ebef
-- Archive content hash: sha256:6d3d412ee096fa2a87dd3123642e8243a19046335638aeb47674d24d46a683df
-- Deployment state returned by Sites: succeeded.
+**https://krishnuni.github.io/search-atlas/**
 
-An additional browser smoke test of the public deployment verified worker execution and the default route: 36 moves, cost 36, 125 non-goal expansions. Documentation-only publication changes after that source commit do not change the deployed application.
+The README embeds actual application screenshots. The full application also runs locally after cloning; no external application service or API key is required.
 
-## Rebuild or host elsewhere
+## Verification before deployment
 
-Run `npm ci` and `npm run build`, then serve `dist/` from any static host with JavaScript module and worker support. Asset paths are relative. Browser storage and URL-fragment sharing need no server-side database. Keep MIME types for JavaScript, CSS, fonts and SVG correct. If deploying below a path prefix, check the favicon path and worker asset resolution in the real hosted build.
+The repository's verification workflow installs locked dependencies, runs correctness tests, builds the production bundle and executes browser/accessibility checks. Only a successful main-branch verification uploads the static Pages artifact and permits the deployment job to run. Pull requests run verification without publishing.
 
-The Sites workflow keeps deployment identity in `.openai/hosting.json`. Credentials remain outside tracked files. Never commit `.sites-runtime`, local authentication state, node_modules, test reports or deployment archives.
+The deployment job receives only the GitHub Pages and OIDC permissions needed by GitHub's official Pages action. No deployment credentials are stored in source. GitHub records deployments in the repository's github-pages environment.
+
+## Build and run locally
+
+Run `npm ci` and `npm run dev` for local development, or `npm run build` and `npm run preview` for the static production build.
+
+The build uses relative asset paths, including its favicon, so it supports the `/search-atlas/` project path. Web Workers and fonts are served from the same origin. Browser storage and URL-fragment sharing need no database.
+
+The previous hosting configuration was removed and the earlier hosted copy was made private at the author's request. GitHub Pages is the public demo location.
